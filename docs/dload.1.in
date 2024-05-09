@@ -1,13 +1,13 @@
 .\"
-.\" Man page for nload
+.\" (WIP)Not man page for dload
 .\" Copyright (C) 2001 - 2012 by Roland Riegel <feedback@roland.riegel.de>
 .\"
-.TH nload 1 "February 06, 2012" nload "Network monitoring tools"
+.TH dload 1 "February 06, 2012" dload "Network monitoring tools"
 .SH NAME
-nload \- displays the current network usage
+dload \- displays the current network usage
 
 .SH SYNOPSIS
-.B nload
+.B dload
 .RB [ \-a
 .IR period ]
 .RB [ \-i
@@ -23,19 +23,19 @@ nload \- displays the current network usage
 .IR h|H|b|B|k|K|m|M|g|G ]
 .RI [ devices ]
 
-.B nload \-\-help|\-h
+.B dload \-\-help|\-h
 
 .SH DESCRIPTION
-.B nload
+.B dload
 is a console application which monitors network traffic and bandwidth usage in real time.
 It visualizes the in- and outgoing traffic using two graphs and provides additional info
 like the total amount of transfered data and min/max network usage.
 
 .SH USAGE
 When running
-.B nload,
+.B dload,
 you can switch between the devices (which you gave
-.B nload
+.B dload
 either on the command line or which were auto-detected) by pressing the left and right arrow keys. If the
 .B \-m
 command line parameter is given, the arrow keys switch as many devices back and forth as
@@ -49,7 +49,7 @@ below.
 
 .SH OPTIONS
 A summary of the options supported by
-.B nload
+.B dload
 is included below.
 
 .TP
@@ -76,7 +76,7 @@ PLEASE NOTE:
 Specifying refresh intervals shorter than about 100 milliseconds makes traffic
 calculation very unprecise. Also the display may flicker using such short
 refresh intervals.
-.B nload
+.B dload
 tries to balance this out by doing extra time measurements, but this may
 not always succeed.
 .TP
@@ -103,7 +103,7 @@ Show a short summary of these command line options.
 
 .SH MAIN WINDOW
 After starting,
-.B nload
+.B dload
 begins to monitor the network devices given on the
 command line, or, if none where specified, the default device. In this mode,
 the following key shortcuts are available.
@@ -138,11 +138,11 @@ Reload settings from the config files.
 .TP
 .B 'q', 'Ctrl+C'
 Quit
-.BR nload .
+.BR dload .
 
 .SH OPTION WINDOW
 The parameters given to
-.B nload
+.B dload
 on the command line can be adjusted during run time by pressing the 'F2' key. A
 small window appears on the top of the screen, listing the available settings.
 
@@ -214,22 +214,22 @@ parameter or configured in the configuration file.
 .TP
 .B DataInMin
 The absolute minimum number of bytes received per second, calculated since starting
-.BR nload .
+.BR dload .
 
 .TP
 .B DataOutMin
 The absolute minimum number of bytes transmitted per second, calculated since starting
-.BR nload .
+.BR dload .
 
 .TP
 .B DataInMax
 The absolute maximum number of bytes received per second, calculated since starting
-.BR nload .
+.BR dload .
 
 .TP
 .B DataOutMax
 The absolute maximum number of bytes transmitted per second, calculated since starting
-.BR nload .
+.BR dload .
 
 .TP
 .B TimeSeconds
@@ -243,25 +243,25 @@ The microseconds part of the date and time in
 .SH FILES
 
 .TP
-.I $(HOME)/.nload
+.I $(HOME)/.dload
 User-specific configuration file (overrides system-wide settings). Press
 .B 'F5'
-from within nload to save the current settings to this file.
+from within dload to save the current settings to this file.
 
 .TP
-.I /etc/nload.conf
+.I /etc/dload.conf
 System-wide configuration file. It uses the same syntax as the user-specific
 configuration file.
 
 .TP
 .I /sys/class/net/*/* /proc/net/dev
 are read by
-.B nload
+.B dload
 when running on Linux to get the network traffic data.
 
 .SH VERSION
 This manual page describes version @VERSION@ of
-.BR nload .
+.BR dload .
 
 For updates, look at the nload homepage:
 .br

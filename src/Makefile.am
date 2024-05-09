@@ -1,6 +1,7 @@
 ## Helder Correia <helder.correia@netcabo.pt>
+## Modified by Just_Explode <explodedbruh@gmail.com>
 
-bin_PROGRAMS = nload
+bin_PROGRAMS = dload
 
 nload_SOURCES = \
 	app.cpp app.h									\

@@ -1,7 +1,9 @@
-dnl Helder Correia <helder.correia@netcabo.pt>
+dnl nload originally made by Helder Correia <helder.correia@netcabo.pt>
+dnl Just_Explode <explodedbruh@gmail.com>
 dnl Process this file with autoconf to produce a configure script.
+dnl idk im just copypasting i have no idea where will this lead to
 
-AC_INIT([nload], [0.7.4], [feedback@roland-riegel.de])
+AC_INIT([dload], [0.7.4 - 0.1], [explodedbruh@gmail.com])
 
 AC_CANONICAL_HOST
 
@@ -11,9 +13,9 @@ AC_CONFIG_HEADER([config.h])
 
 AC_CONFIG_FILES([
 Makefile
-nload.spec
+dload.spec
 docs/Makefile
-docs/nload.1
+docs/dload.1
 src/Makefile
 ])
 
@@ -75,7 +77,7 @@ case $host_os in
     	AC_SUBST(INCLUDES)
         ;;
     *)
-        AC_MSG_ERROR([nload does not support this operating system!])
+        AC_MSG_ERROR([dload does not support this operating system(or is it?)!])
         ;;
 esac
 
@@ -87,6 +89,7 @@ dnl Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([limits.h stdlib.h string.h unistd.h curses.h form.h ncurses/form.h math.h sys/param.h sys/socket.h sys/time.h sys/ioctl.h arpa/inet.h netinet/in.h])
 
+dnl i have no idea what this do even with chatGPT. if you think something is unneeded after this fork, please do me a favor.
 if test "$ac_cv_lib_ncurses_initscr" != "yes"; then
     AC_MSG_ERROR([ncurses library not found. ncurses is required for $PACKAGE_NAME.])
 fi
@@ -106,15 +109,17 @@ AC_TYPE_SIZE_T
 AC_HEADER_TIME
 
 dnl Use some gcc specific options.
+dnl WHY USE IF???(just curious)
 if test "$GCC" = "yes" ; then
      CFLAGS="$CFLAGS -Wall"
      CXXFLAGS="$CXXFLAGS -Wall"
 fi
 
 dnl Forward sysconfdir to the preprocessor
+dnl where tf is sysconfdir
 CPPFLAGS="$CPPFLAGS -DSYSCONFDIR='\"\$(sysconfdir)\"'"
 
-dnl Checks for library functions.
+dnl Checks for library functions.(some of them seems unnecessary?)
 AC_TYPE_SIGNAL
 AC_CHECK_FUNCS([gettimeofday inet_ntoa socket])
 

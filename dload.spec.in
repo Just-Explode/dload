@@ -1,9 +1,9 @@
-Summary        : A console application which monitors network traffic and bandwidth usage in real time
+Summary        : (WIP)Not a console application which monitors network traffic and bandwidth usage in real time
 Name           : @PACKAGE@
 Version        : @VERSION@
 Release        : 1
 Copyright      : GPL
-Url            : http://www.roland-riegel.de/nload/
+Url            : https://github.com/Just-Explode/dload
 Packager       : Helder Correia <helder.correia@netcabo.pt>
 Group          : Applications/System
 Source         : %{name}-%{version}.tar.gz

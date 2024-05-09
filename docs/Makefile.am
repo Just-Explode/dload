@@ -1,6 +1,7 @@
 ## Helder Correia <helder.correia@netcabo.pt>
+## Modified by Just_Explode <explodedbruh@gmail.com>
 
-man1_MAN = nload.1
+man1_MAN = dload.1
 
 install:
 	$(mkinstalldirs) $(DESTDIR)$(mandir)/man1
