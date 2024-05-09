@@ -12,3 +12,5 @@ echo "Finished."
 ./configure || exit 1
 make || exit 1
 ./src/dload
+git clean -fdx
+ls
