@@ -13,4 +13,4 @@ echo "Finished."
 make || exit 1
 ./src/dload
 git clean -fdx
-ls
+ls -al --color=auto .
