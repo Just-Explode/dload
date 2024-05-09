@@ -3,7 +3,7 @@
 
 bin_PROGRAMS = dload
 
-nload_SOURCES = \
+dload_SOURCES = \
 	app.cpp app.h									\
 	appcontrol.h									\
 	dataframe.h										\
@@ -28,24 +28,24 @@ nload_SOURCES = \
 	window.cpp window.h
 
 if HAVE_BSD
-nload_SOURCES += \
+dload_SOURCES += \
 	devreader-bsd.cpp devreader-bsd.h
 endif
 
 if HAVE_HPUX
-nload_SOURCES += \
+dload_SOURCES += \
 	devreader-hpux.cpp devreader-hpux.h
 endif
 
 if HAVE_LINUX
-nload_SOURCES += \
+dload_SOURCES += \
 	devreader-linux.cpp devreader-linux.h			\
 	devreader-linux-proc.cpp devreader-linux-proc.h \
 	devreader-linux-sys.cpp devreader-linux-sys.h
 endif
 
 if HAVE_SOLARIS
-nload_SOURCES += \
+dload_SOURCES += \
 	devreader-solaris.cpp devreader-solaris.h
 endif
 
